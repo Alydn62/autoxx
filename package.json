@@ -2,7 +2,7 @@
   "name": "treasury-vercel",
   "version": "1.0.0",
   "private": true,
-  "description": "Serverless API wrapper for Treasury automation (Vercel-ready)",
+  "description": "Serverless API + Frontend for Treasury automation (Vercel)",
   "scripts": {
     "create": "node app.js create",
     "send-otp": "node app.js send-otp",
