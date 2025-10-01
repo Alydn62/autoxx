@@ -4,5 +4,8 @@
       "maxDuration": 60,
       "memory": 1024
     }
-  }
+  },
+  "routes": [
+    { "src": "^/$", "dest": "/index.html" }
+  ]
 }
