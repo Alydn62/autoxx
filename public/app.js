@@ -1,4 +1,3 @@
-
 const q = (s) => document.querySelector(s);
 const stdoutEl = q("#stdout");
 const stderrEl = q("#stderr");
@@ -21,12 +20,9 @@ const appendStd = (out, err) => {
 async function call(method, path) {
   const res = await fetch(path, { method });
   const ct = res.headers.get("content-type") || "";
-  if (ct.includes("application/json")) {
-    return await res.json();
-  } else {
-    const text = await res.text();
-    return { raw: text, ok: res.ok };
-  }
+  if (ct.includes("application/json")) return await res.json();
+  const text = await res.text();
+  return { raw: text, ok: res.ok };
 }
 
 async function callPost(path, body) {
@@ -36,12 +32,9 @@ async function callPost(path, body) {
     body: JSON.stringify(body || {}),
   });
   const ct = res.headers.get("content-type") || "";
-  if (ct.includes("application/json")) {
-    return await res.json();
-  } else {
-    const text = await res.text();
-    return { raw: text, ok: res.ok };
-  }
+  if (ct.includes("application/json")) return await res.json();
+  const text = await res.text();
+  return { raw: text, ok: res.ok };
 }
 
 async function onCreate() {
