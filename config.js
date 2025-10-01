@@ -1,4 +1,3 @@
-
 module.exports = {
   jasaotp: {
     apiKey: process.env.JASAOTP_API_KEY || "REPLACE_ME",
@@ -8,7 +7,7 @@ module.exports = {
   },
   treasury: {
     loginUrl: process.env.TREASURY_LOGIN_URL || "https://www.treasury.id/login",
-    password: process.env.TREASURY_PASSWORD || "@Facebook20"
+    password: process.env.TREASURY_PASSWORD || ""
   },
   runtime: {
     expireMinutes: parseInt(process.env.EXPIRE_MINUTES || "10", 10),
