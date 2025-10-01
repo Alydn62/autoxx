@@ -1,0 +1,23 @@
+{
+  "name": "treasury-vercel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Serverless API wrapper for Treasury automation (Vercel-ready)",
+  "scripts": {
+    "create": "node app.js create",
+    "send-otp": "node app.js send-otp",
+    "check-otp": "node app.js check-otp",
+    "status": "node app.js status",
+    "auto-login": "node app.js auto-login",
+    "check-retry": "node app.js check-retry",
+    "logs": "node app.js logs",
+    "clear": "node app.js clear",
+    "postinstall": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.55.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
