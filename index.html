@@ -4,28 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Treasury Automation Dashboard</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/public/style.css" />
 </head>
 <body class="bg-slate-50 text-slate-900">
   <header class="max-w-6xl mx-auto px-4 py-6">
     <h1 class="text-2xl font-bold">Treasury Automation Dashboard</h1>
-    <p class="text-sm text-slate-600">Kelola proses create akun, OTP, dan log tanpa pakai endpoint manual.</p>
+    <p class="text-sm text-slate-600">Kelola proses create akun, OTP, dan log tanpa terminal.</p>
   </header>
 
   <main class="max-w-6xl mx-auto px-4 pb-16">
     <section class="grid md:grid-cols-3 gap-4">
-      <!-- Create -->
       <div class="card">
         <h2 class="card-title">Create Akun</h2>
         <label class="block text-sm mb-1">Jumlah akun</label>
         <input id="inp-create-n" type="number" min="1" max="50" value="2" class="input" />
         <button id="btn-create" class="btn w-full mt-3">Create</button>
-        <p class="hint mt-3">Akan memanggil <code>POST /api/create?n=…</code></p>
+        <p class="hint mt-3">Memanggil <code>POST /api/create?n=…</code></p>
       </div>
 
-      <!-- OTP -->
       <div class="card">
         <h2 class="card-title">OTP</h2>
         <div class="flex gap-2">
@@ -33,10 +30,9 @@
           <button id="btn-check-otp" class="btn flex-1">Check OTP</button>
         </div>
         <button id="btn-check-retry" class="btn w-full mt-2">Check OTP (Retry)</button>
-        <p class="hint mt-3">Memanggil <code>POST /api/send-otp</code>, <code>/api/check-otp</code>, atau <code>/api/check-retry</code>.</p>
+        <p class="hint mt-3">Memanggil <code>/api/send-otp</code>, <code>/api/check-otp</code>, <code>/api/check-retry</code></p>
       </div>
 
-      <!-- Util -->
       <div class="card">
         <h2 class="card-title">Utilitas</h2>
         <div class="flex gap-2">
@@ -71,7 +67,7 @@
   </main>
 
   <footer class="max-w-6xl mx-auto px-4 py-8 text-center text-xs text-slate-500">
-    &copy; <span id="year"></span> Treasury Automation. Built for Vercel Serverless.
+    &copy; <span id="year"></span> Treasury Automation. Built for Vercel.
   </footer>
 
   <div id="toast" class="toast hidden"></div>
